@@ -35,6 +35,12 @@ app.get("/test", async (req, res) => {
     res.json({"data": data})
 })
 
+app.get("/new", async (req, res) => {
+    const data = await supabase.from('test').select()
+    res.json({"data": data})
+})
+
 app.listen(5000, () => {
     console.log("listening on 5000")
 })
+
