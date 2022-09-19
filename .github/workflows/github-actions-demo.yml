@@ -4,4 +4,4 @@ jobs:
   Explore-Github-Actions:
     runs-on: ubuntu-latest
     steps:
-      run: echo "SHEEEESH"
+      - run: echo "SHEEEESH"
