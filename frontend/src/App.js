@@ -9,6 +9,7 @@ function App() {
     ).then(
       data => {
         setBackendData(data)
+        console.log(data)
       }
     )
   }, [])
@@ -20,13 +21,13 @@ function App() {
         ? <p>Loading...</p> 
         : <div>
           {
-            backendData.data.data.map((test, i) => (
+            backendData.data ? backendData.data.data.map((test, i) => (
               <ul key={i}>
                   <li>name: {test.name}</li>
                   <li>age: {test.age}</li>
                   <li>score: {test.score}</li>
               </ul>
-            ))
+            )) : ''
           }
         </div>
       }
